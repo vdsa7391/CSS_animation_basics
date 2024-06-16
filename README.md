@@ -1,4 +1,4 @@
-This projects include few small CSS animation projects, which i try to combine in one. In this i also use JS.
+These projects includes few small CSS animation projects, which i try to combine in one. In these i also use JS.<br>
 Things I learned in this:
   1. Custom Scrollbar
   2. Custom Buttons

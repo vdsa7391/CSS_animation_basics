@@ -5,3 +5,6 @@ Things I learned in this:
   3. Pop-Up Video
   4. Automated Text
   5. Image Gallery
+
+
+My website is live at https://vdsa7391.github.io/CSS_animation_basics/

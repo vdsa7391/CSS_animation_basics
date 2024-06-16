@@ -1,0 +1,461 @@
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --mainColor:blue;
+    --main-font:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    --primary-font:"Inter", sans-serif;
+}
+
+
+
+
+.video-container{
+    width: 100%;
+    height: 80vh;
+    display: flex; justify-content: center; align-items: center;
+    
+    flex-direction: column;
+    position: relative;
+}
+
+.video-container video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    z-index: -1;
+    opacity: 0.6;
+
+}
+
+.video-container h1{
+    color: white;
+    margin-bottom: 40px;
+    font-size: 80px;
+   
+}
+
+.video-container button{
+    padding: 12px 30px;
+    position: relative;
+    background: white;
+    border-radius: 100px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all 0.2s;
+    border: none;
+}
+
+.video-container button:before{
+    content: "";
+    top: 0%;
+    left: 0%;
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex; justify-content: center; align-items: center;
+    border-radius: 100px;
+    transition: all 1s;
+    z-index: -1;
+    
+}
+
+.video-container button:hover:before{
+    transform: scaleX(1.2) scaleY(1.5);
+    opacity: 0;
+}
+
+
+
+.loading-container{
+    background: black;
+    opacity: 0.7;
+    width: 100%;
+    height: 100px;
+    display: flex; justify-content: center; align-items: center;
+    padding: 1.3rem 2rem;
+    
+    
+}
+
+.circles{
+    height: 30px;
+    width: 30px;
+    background: white;
+    border-radius: 50px;
+    margin-left: 20px;
+    
+    transition: all 1s;
+    animation: load 1s ease-in-out infinite;
+    
+    
+}
+.c1{
+    animation-delay: 0.4s;
+}
+
+.c2{
+    animation-delay: 0.5s;
+}
+
+.c3{
+    animation-delay: 0.6s;
+}
+
+.c4{
+    animation-delay: 0.7s;
+}
+
+
+
+
+
+
+@keyframes load {
+    0%{
+        width: 30px;
+        height: 30px;
+    }
+
+    50%{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+.css-intro{
+    width: 100%;
+    height: 450px;
+    background: black; opacity: 0.7;
+    position: relative;
+    display: flex; justify-content: center; align-items: center;
+    
+}
+
+.content{
+    background:rgb(255, 255, 255);
+    width: 90%; height: 70%; 
+    padding: 0px 50px;
+
+    display: flex; justify-content: space-around; align-items: flex-start; flex-direction: column;
+    position: absolute;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+    
+}
+
+::-webkit-scrollbar{
+    background: black;
+    width: 10px;
+    
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(3, 141, 3);
+    border-radius: 10px;
+    
+    
+
+
+}
+
+.content h2{
+    font-size: 50px; 
+    font-family: var(--main-font);
+    padding:30px 0px;
+    
+
+    
+}
+
+.content p{
+    font-size: 15px;
+    font-family: var(--primary-font);
+}
+
+.img-container{
+    height: 800px;
+    width: 100%;
+    display: flex; justify-content: center; align-items: center;
+
+    background: black; 
+}
+
+.i-container{
+    width: 40%;
+    height: 85%;
+    background: black;
+    position: relative;
+
+    
+    
+}
+
+.img{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.1s;
+    
+}
+.i1{
+    background: url(html.png);
+    background-position: right;
+    background-size: contain;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    
+}
+
+.i2{
+    background: url(css.jpg);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(23% 0, 100% 0, 100% 100%, 50% 100%);
+    
+}
+
+.i3{
+    background: url(JS.png);
+    background-position: cover;
+    background-size: cover;
+    clip-path: polygon(79% 0, 100% 0, 100% 100%, 60% 100%);
+
+}
+
+.i-container:hover .img {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+
+}
+
+.i-container .img:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.custom_buttons{
+    height: 400px; width: 100%;
+    background-color: white;
+    display: flex; flex-direction: column; justify-content: start; align-items: flex-start;
+    padding: 50px 100px;
+}
+
+.custom_buttons h2{
+    font-size: 50px;
+    font-family: var(--main-font);
+    
+}
+
+.btns{
+    width: 80%; height: 150px; background: white;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 30px;
+    margin: 4rem 8rem;
+   
+}
+
+.b{
+    background: white;
+    width: 40%; height: 80%;
+    margin-left: 25px;
+    flex: 25%;
+    border: none;
+    border: 2px solid greenyellow;
+    position: relative;
+    
+    transition: all 0.2s;
+    
+}
+
+
+.b1::before{
+    content: "";
+    border-top: 4px solid rgb(34, 236, 34);
+    background: transparent;
+    top: -2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex; justify-content: center; align-items: center;
+    transition: all 0.2s;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.b1::after{
+    content: "";
+    border-bottom: 4px solid rgb(34, 236, 34);
+    background: transparent;
+    top:0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex; justify-content: center; align-items: center;
+    transition: all 0.2s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.b1:hover::before,
+.b1:hover::after{
+    transform: scaleX(1);
+    
+}
+
+
+.b2{
+  
+    transition: all 0.2s;
+    overflow: hidden;
+
+}
+
+.b2::before{
+    content: "Hello";
+    top: 0;
+    position: absolute;
+    left: 0;
+    height: 100%; width: 100%;
+    display: flex; justify-content: center; align-items: center;
+    transform: translateY(-110%);
+    background: black;
+    color: white;
+    transition: all 0.4s;
+}
+
+.b2:hover::before{
+    transform: translateY(0%);
+
+}
+
+.b3:before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: 100%; width: 100%;
+    background: greenyellow;
+    transition: all 0.2s;
+    transform-origin: top;
+    
+    mix-blend-mode: multiply;
+    
+    
+
+}
+
+.b3::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 100%; width: 100%;
+    background: yellow;
+    transform-origin: bottom;
+    
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    
+
+}
+
+.b3:hover::before{
+    top: -6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(75deg); 
+    
+}
+
+
+.b3:hover::after{
+    top: 6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(-75deg); 
+}
+
+.b4{
+    margin-left: 60px;
+}
+
+.b4::before{
+    content: "";
+    height: 30px; width: 30px;
+    top: -10px; left: -10px;
+    position: absolute;
+    border-top: 5px solid green;
+    border-left:5px solid green ;
+    transition: all 0.2s;
+}
+
+.b4::after{
+    content: "";
+    height: 30px; width: 30px;
+    bottom: -10px; right: -10px;
+    position: absolute;
+    border-bottom: 5px solid green;
+    border-right: 5px solid green;
+    transition: all 0.2s;
+}
+
+.b4:hover::before,
+.b4:hover::after{
+    width: 100%; height: 100%;
+}
+
+
+.b5::before{
+    content: "Hello";
+    position: absolute;
+    height: 100%; width: 100%;
+    top: 0; left: 0; 
+    display: flex; justify-content: center; align-items: center;
+    transform: rotateX(270deg);
+    background-color: greenyellow;
+    transition: all 0.2s;
+    transform-origin: top;
+}
+
+.b5::after{
+    content: "World";
+    position: absolute;
+    height: 100%; width: 100%;
+    top: 0; left: 0; 
+    display: flex; justify-content: center; align-items: center;
+    transform: rotateX(270deg);
+    background-color: yellow;
+    transition: all 0.8s;
+    transform-origin: top;
+}
+
+
+.b5:hover::before,
+.b5:hover::after{
+    transform: rotateX(0deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
